@@ -100,6 +100,26 @@ def turn(board: BattleshipBoard) -> bool:
     # if you found the ship, you win
     return board.is_ship(guess_row, guess_col)
 
+def main() -> None:
+    os.system("clear")
+
+    print('--'*34)
+    print(' WELCOME to The Battleship Game! \n The board size is 5x5,')
+    print(' From the top left conor you have row = 1 and column = 1 ')
+    print(' You can either have 1 player or 2 player and each one has 5 guesses')
+    print('--'*34)
+
+
+    player_count = read_int(
+        "Please enter how many players are going to play: ", max_value=2
+    )
+    board = BattleshipBoard(BOARD_SIZE_X, BOARD_SIZE_Y)
+    
+
+
+if __name__ == "__main__":
+    main()
+
 
 
 
