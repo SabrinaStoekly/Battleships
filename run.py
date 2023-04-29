@@ -14,6 +14,23 @@ HIDDEN = "-"
 SHIP = "S"
 GUESS = "X"
 
+def read_int(prompt: str, min_value: int = 1, max_value: int = 5) -> int:
+    """
+    Read an integer from user input.
+    """
+
+    while True:
+        number = input(prompt)
+        try:
+            value = int(number)
+            if value < min_value:
+                print(f"The minimum value is {min_value}. Try again.")
+            elif value > max_value:
+                print(f"The maximum value is {max_value}. Try again.")
+            else:
+                return value
+        except ValueError:
+            print("That's not a number! Try again.")
 
             
 class BattleshipBoard:
@@ -26,7 +43,7 @@ class BattleshipBoard:
     """
     
     def __init__(self, size_x: int, size_y: int) -> None:
-        # create the grid
+        
         self.grid = [[HIDDEN] * size_x for _ in range(size_y)]
 
         # place a random ship on the grid
@@ -51,6 +68,37 @@ class BattleshipBoard:
             rows_str.append(" ".join(row))
         return "\n".join(rows_str)
 
+
+def read_guess(already_guessed: Callable[[int, int], bool]) -> tuple[int, int]:
+    """
+    Read and valid guess from the player.
+    """
+
+    while True:
+        # read the row and column
+        guess_row = read_int("Guess row: ", max_value=BOARD_SIZE_Y) - 1
+        guess_col = read_int("Guess column: ", max_value=BOARD_SIZE_X) - 1
+
+        # if the guess is valid, return the guessed row and column
+        if not already_guessed(guess_row, guess_col):
+            return guess_row, guess_col
+
+        print("You've already guessed on that row! Try again.")
+
+
+def turn(board: BattleshipBoard) -> bool:
+    """
+    Responsible for handling a single player's turn in the game.
+    """
+
+    print(board.to_string())
+
+    # let the player guess
+    guess_row, guess_col = read_guess(board.already_guessed)
+    board.place_guess(guess_row, guess_col)
+
+    # if you found the ship, you win
+    return board.is_ship(guess_row, guess_col)
 
 
 
