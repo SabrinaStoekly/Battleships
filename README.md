@@ -1,32 +1,22 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome,
+## Title
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+The Battleship game project is a Python program that allows the user to play the classic game of Battleship on a 5x5 board. The program uses a simple algorithm to randomly place a certain number of ships on the board, and then prompts the user to guess the location of the ships. If the user guesses the location of a ship correctly, they win the game. The program also provides feedback to the user after each guess, letting them know if they hit or missed a ship. The project can be extended to include more advanced features, such as multiple difficulty levels, multiple boards, and a graphical user interface.
 
-## Reminders
+## project img
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+## Who is this game for
 
-## Creating the Heroku app
+The Battleship game is suitable for people of all ages who enjoy strategic guessing games. It is a fun and engaging game that can be enjoyed by kids, adults, and seniors alike.
+Overall, the Battleship game is a versatile and entertaining game that can be enjoyed by anyone looking for a fun and challenging guessing game.
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+## How to play 
 
-1. `heroku/python`
-2. `heroku/nodejs`
+The game is played on a 5x4 board with three ships.
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+The player places the three ships on their board without the other player seeing the locations.
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+The player then takes turns guessing the location of the ships by calling out a row and column number.
 
-Connect your GitHub repository and deploy as normal.
+If the guess hits a ship, the player wins the game. If the guess misses, the player is told to try again.
 
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
----
-
-Happy coding!
