@@ -1,9 +1,10 @@
 
-## Title
+# Battleship Game
 
 The Battleship game project is a Python program that allows the user to play the classic game of Battleship on a 5x5 board. The program uses a simple algorithm to randomly place a certain number of ships on the board, and then prompts the user to guess the location of the ships. If the user guesses the location of a ship correctly, they win the game. The program also provides feedback to the user after each guess, letting them know if they hit or missed a ship. The project can be extended to include more advanced features, such as multiple difficulty levels, multiple boards, and a graphical user interface.
 
-## project img
+<img src="assets/readme/main_img.jpg" alt="Responsa
+ive Image of the Termianl">
 
 ## Who is this game for
 
@@ -102,8 +103,10 @@ Overall, the code is a simple implementation of the classic game Battleship, whe
 - GitHub
 - Gitpod
 
+Heruko for project deplyment
 Gitpod served as the local repository and IDE. 
 GitHUb served as the remote repository. 
+
 
 The following steps were followed to maintain version control;
 
@@ -115,8 +118,6 @@ This is the process I followed having completing each significant section of cod
 - git add . (This added the work to git)
 - git commit -m "COMMIT MESSAGE" (This committed the work)
 - git push (This pushed the work to GitHub)
-
-
 
 # Deployment 
 
