@@ -32,18 +32,18 @@ Overall, the Battleship game is a versatile and entertaining game that can be en
 
 - A randomly generated board with a hidden ship location
 
-(Imagem of board)
+<img src="assets/readme/battleship_board.jpg" alt="Board Game">
 
 - The ability to guess a location on the board by inputting row and column values
     - Must be a number 
     - Cannot ipnut the same number twice
     - One cannot place coordinates that fall outside the size of the game board.
 
-(imagem Inputs)
+<img src="assets/readme/battleship_inputs.jpg" alt="Inputs Checks">
 
 - Feedback on the guessed location, including whether the guess is a hit or a miss
 
-(imagem of end of game)
+<img src="assets/readme/battleship_end_game.jpg" alt="You shank the boad imagem">
 
 - The ability to see the number of turns it took to guess the location of the ship
 
@@ -73,12 +73,22 @@ The play_game function initializes a new Battleship instance, prints the board t
 Overall, the code is a simple implementation of the classic game Battleship, where the player tries to guess the position of a hidden ship on a 5x5 grid.
 
 # Testing
- 
 
+- I have manually tested the code 
+- I bugged tested the code using PEP8 liner and no error were confimed
+- Tested my code on my GitPod and Heroku terminal
+
+## Bug 
+  
+  - I was getting a ValueError because the input function was returning an empty string instead of a valid integer value. So I added a try/except block around the input statements to catch the ValueError and prompt the user to enter a valid input.
+  
+  ## Remain Bugs
+
+   - Occaisionally a bug will show were there is no ship. I've repeatedly troubleshooted this issue and can not resolve.
 
   ## Validator 
 
-
+<img src="assets/readme/python_validator.jpg" alt="CI Pyhton Linter">
 
 # Resources
 - [Code Institute](https://codeinstitute.net/) Course material
@@ -111,4 +121,12 @@ This is the process I followed having completing each significant section of cod
 # Deployment 
 
 I followed the below steps on Heroku (insert link) to deploy the website. 
+
+- On my Heroku Dashboard, create new app.
+- Under Setting, builpack I added two pack 
+  - heruko/python
+  - heruko/nodjs
+- Under Deploy tab
+  - Connect my GitHub account
+  - Search for a repository to connect to (repository name)
 
