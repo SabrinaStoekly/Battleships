@@ -12,11 +12,102 @@ Overall, the Battleship game is a versatile and entertaining game that can be en
 
 ## How to play 
 
-The game is played on a 5x4 board with three ships.
+- The computer will generate a 5x5 board and place a battleship on a random cell.
 
-The player places the three ships on their board without the other player seeing the locations.
+- Your goal is to guess the location of the battleship by calling out coordinates in the form of (row, column).
 
-The player then takes turns guessing the location of the ships by calling out a row and column number.
+- After each guess, the computer will tell you if you've hit the battleship or missed.
 
-If the guess hits a ship, the player wins the game. If the guess misses, the player is told to try again.
+- If you hit the battleship, the game is over, and you win!
+
+- If you miss, the computer will mark the cell on the board with an 'X' to indicate that you've already guessed that spot.
+
+- Keep guessing until you've hit the battleship, and the game is over.
+
+- The computer will keep track of the number of turns it takes you to find the battleship.
+
+- Good luck and have fun!
+
+# Features
+
+- A randomly generated board with a hidden ship location
+
+(Imagem of board)
+
+- The ability to guess a location on the board by inputting row and column values
+    - Must be a number 
+    - Cannot ipnut the same number twice
+    - One cannot place coordinates that fall outside the size of the game board.
+
+(imagem Inputs)
+
+- Feedback on the guessed location, including whether the guess is a hit or a miss
+
+(imagem of end of game)
+
+- The ability to see the number of turns it took to guess the location of the ship
+
+- The ability to see all guesses made so far in the game.
+
+
+# Future Features
+
+- Allow for more than one player to participate in the game (two player)
+- Implement the ability for players to manually place their ships on the board.
+
+# Data Model
+
+The Battleship game consists of a 5x5 game board represented by a 2D list, a ship represented by its row and column coordinates, the number of turns taken by the player, and a list of the player's guesses represented by their row and column coordinates. 
+
+The game board is initialized with dashes ('-') and the ship is placed randomly on the board. The player makes a guess by entering a row and column number, and the game checks if the guess is a hit or a miss. If the guess is a hit, the player wins the game, and if the guess is a miss, the player continues to make guesses until they sink the ship or run out of turns. The game ends when the player sinks the ship or runs out of turns.
+
+The class Battleship that represents the game itself. The __ init __ method initializes the board, the ship's position, the number of turns taken, and the list of guesses made by the player. The place_ship method randomly sets the position of the ship on the board.
+
+The print_board method prints the current state of the board to the console.
+
+The make_guess method takes a row and column as arguments and checks if there is a ship at that location on the board. It increments the number of turns taken, and if the guess is correct, it returns True. If the guess is incorrect, it prints a message to the console and adds an "X" to the board at the guessed position. It returns False.
+
+The play_game function initializes a new Battleship instance, prints the board to the console, and then prompts the player to make a guess. It calls the make_guess method and keeps prompting the player until they guess correctly. Once the player wins, it prints the number of turns taken and a list of all the guesses made by the player.
+
+Overall, the code is a simple implementation of the classic game Battleship, where the player tries to guess the position of a hidden ship on a 5x5 grid.
+
+# Testing
+ 
+
+
+  ## Validator 
+
+
+
+# Resources
+- [Code Institute](https://codeinstitute.net/) Course material
+- [W3Schools]( https://www.w3schools.com/) 
+- [Am I Responsive](http://ami.responsivedesign.is/) – Check the sites responsiveness
+- [CI Python Linter](https://pep8ci.herokuapp.com/#) Validate Python code
+
+# Version Control 
+
+- Heroku
+- GitHub
+- Gitpod
+
+Gitpod served as the local repository and IDE. 
+GitHUb served as the remote repository. 
+
+The following steps were followed to maintain version control;
+
+- I created a repository on GitHub and named it 'Battleship' 
+- I then signed in to Gitpod and opened a new workspace via the repository name 'Battleship'
+- I saved my work on GitPod at regular intervals and pushed it to GitHub to keep it safe
+
+This is the process I followed having completing each significant section of code, I typed the following into the terminal:
+- git add . (This added the work to git)
+- git commit -m "COMMIT MESSAGE" (This committed the work)
+- git push (This pushed the work to GitHub)
+
+
+
+# Deployment 
+
+I followed the below steps on Heroku (insert link) to deploy the website. 
 
