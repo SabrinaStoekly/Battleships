@@ -54,6 +54,7 @@ Overall, the Battleship game is a versatile and entertaining game that can be en
 
 - Allow for more than one player to participate in the game (two player)
 - Implement the ability for players to manually place their ships on the board.
+- Limited the player guesses.
 
 # Data Model
 
